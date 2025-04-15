@@ -12,7 +12,7 @@ app.get('/health', (req, res) => {
 
 app.post('/webhook', async (req, res) => {
 
-  console.log('Webhook received:', JSON.stringify(req.body), null, 2)
+  console.log('Webhook received:', req.body)
   // const { symbol, action, price, signal } = req.body
   
 
