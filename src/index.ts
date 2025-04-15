@@ -5,13 +5,13 @@ const app = express()
 const port = 8080
 
 app.use(bodyParser.json())
+app.use(bodyParser.text({ type: '*/*' })); // Parse raw text
 
 app.get('/health', (req, res) => {
   res.status(200).send('OK')
 })
 
 app.post('/webhook', async (req, res) => {
-
   console.log('Webhook received:', req.body)
   // const { symbol, action, price, signal } = req.body
   
